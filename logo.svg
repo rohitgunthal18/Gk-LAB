@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <defs>
+    <linearGradient id="flaskGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16A085"/>
+      <stop offset="100%" stop-color="#107C67"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Flask -->
+  <path d="M50 15 v12 L30 65 c-1 2 0 5 3 5 h34 c3 0 4-3 3-5 L50 27 v-12 z" 
+        fill="white" stroke="url(#flaskGradient)" stroke-width="2.5"/>
+  
+  <!-- Flask liquid -->
+  <path d="M50 40 L38 62 c-1 2 0 4 3 4 h18 c3 0 4-2 3-4 L50 40z" 
+        fill="url(#flaskGradient)" opacity="0.3"/>
+  
+  <!-- Flask top -->
+  <rect x="45" y="10" width="10" height="5" rx="2" fill="url(#flaskGradient)"/>
+  
+  <!-- Bubbles in flask -->
+  <circle cx="43" cy="50" r="3" fill="url(#flaskGradient)" opacity="0.6"/>
+  <circle cx="55" cy="45" r="2" fill="url(#flaskGradient)" opacity="0.6"/>
+  <circle cx="47" cy="55" r="1.5" fill="url(#flaskGradient)" opacity="0.6"/>
+  
+  <!-- Text: GK LAB -->
+  <text x="85" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#16A085">
+    GK LAB
+  </text>
+  <text x="85" y="58" font-family="Arial, sans-serif" font-size="12" fill="#555555">
+    DIAGNOSTIC CENTER
+  </text>
+  
+  <!-- DNA Helix Icon -->
+  <g transform="translate(180, 40) scale(0.9)">
+    <!-- DNA strand 1 -->
+    <path d="M0,0 C5,5 15,5 20,0 C25,-5 35,-5 40,0" stroke="#16A085" stroke-width="2.5" fill="none"/>
+    <!-- DNA strand 2 -->
+    <path d="M0,10 C5,5 15,5 20,10 C25,15 35,15 40,10" stroke="#16A085" stroke-width="2.5" fill="none"/>
+    <!-- Connecting lines -->
+    <line x1="5" y1="2.5" x2="5" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+    <line x1="15" y1="2.5" x2="15" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+    <line x1="25" y1="2.5" x2="25" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+    <line x1="35" y1="2.5" x2="35" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+  </g>
+</svg> 

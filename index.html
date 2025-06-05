@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Full Body Checkup in Latur | Blood Test at Home - GK Lab</title>
+    <meta name="description" content="Best diagnostic center in Latur for full body checkup, blood test at home & doorstep sample collection. Owned by Rohit Gunthal - top medical testing services in Latur city.">
+    <meta name="keywords" content="full body checkup in latur, blood test at home latur, medical tests latur, home collection lab tests, diagnostics latur, rohit gunthal, doorstep sample collection, pathology lab latur, best diagnostic center latur">
+    <meta name="author" content="Rohit Gunthal">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-MH">
+    <meta name="geo.placename" content="Latur">
+    
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://gklab.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gklab.com/">
+    <meta property="og:title" content="Full Body Checkup & Blood Tests at Home in Latur - GK Lab by Rohit Gunthal">
+    <meta property="og:description" content="Top-rated diagnostic lab in Latur offering full body checkup packages and home sample collection services. Developed by Rohit Gunthal.">
+    <meta property="og:image" content="https://gklab.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gklab.com/">
+    <meta property="twitter:title" content="Full Body Checkup & Blood Tests at Home in Latur - GK Lab">
+    <meta property="twitter:description" content="Top-rated diagnostic lab in Latur offering full body checkup packages and home sample collection services by Rohit Gunthal.">
+    <meta property="twitter:image" content="https://gklab.com/assets/images/og-image.jpg">
+    
+    <!-- Humans.txt attribution -->
+    <link rel="author" href="humans.txt">
+    
+    <!-- Developer Comment: This website is developed by Rohit Gunthal (rohitgunthal1819@gmail.com, 8408088454) -->
+    <!-- All rights reserved. Unauthorized use or distribution of this code is prohibited. -->
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Appointment Popup CSS -->
+    <link rel="stylesheet" href="css/appointment-popup.css">
+    <!-- Cart Badge CSS -->
+    <style>
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #FF8A00;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .btn-cart {
+            position: relative;
+        }
+        
+        /* Animation for cart button */
+        @keyframes cartPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .cart-added {
+            animation: cartPulse 0.5s ease;
+        }
+        
+        /* Notification styles */
+        .notification {
+            animation: slideIn 0.3s forwards;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        /* Popup styles */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+        
+        .popup-content {
+            background-color: white;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            border-radius: 8px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .popup-close {
+            cursor: pointer;
+        }
+        
+        /* User account dropdown styles */
+        .user-toggle {
+            position: relative;
+            margin-left: 10px;
+        }
+        
+        .user-dropdown {
+            right: 0;
+            left: auto;
+            min-width: 180px;
+        }
+        
+        .user-dropdown li a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+        }
+        
+        .user-dropdown li a i {
+            margin-right: 10px;
+            font-size: 14px;
+            color: var(--primary-green);
+        }
+        
+        /* Appointment popup styles */
+        .appointment-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0;
+        }
+        
+        .appointment-popup.active {
+            display: flex;
+        }
+        
+        .appointment-popup .appointment-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .appointment-popup .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .appointment-popup .form-header {
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        
+        .appointment-popup .form-header h2 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        
+        .appointment-popup .form-header p {
+            font-size: 13px;
+        }
+        
+        .appointment-popup .form-group {
+            margin-bottom: 12px;
+        }
+        
+        .appointment-popup .form-label {
+            display: block;
+            margin-bottom: 3px;
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+        
+        .appointment-popup .form-input, 
+        .appointment-popup .form-select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        .appointment-popup .form-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 0;
+        }
+        
+        .appointment-popup textarea.form-input {
+            min-height: 50px;
+            max-height: 100px;
+        }
+        
+        .appointment-popup .alert {
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .appointment-popup .alert-success {
+            background: #D4EDDA;
+            color: #155724;
+        }
+        
+        .appointment-popup .alert-error {
+            background: #F8D7DA;
+            color: #721C24;
+        }
+        
+        .appointment-popup .btn-primary {
+            padding: 10px;
+            font-size: 15px;
+        }
+        
+        /* Custom scrollbar for the appointment container */
+        .appointment-popup .appointment-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .appointment-popup .appointment-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .appointment-popup .appointment-container::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+        
+        .appointment-popup .appointment-container::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+        
+        @media (max-height: 700px) {
+            .appointment-popup .appointment-container {
+                max-height: 90vh;
+                padding: 15px;
+            }
+            
+            .appointment-popup .form-group {
+                margin-bottom: 8px;
+            }
+            
+            .appointment-popup .form-header {
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h1 class="logo-text">GK Lab</h1>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <div class="menu-dropdown">
+                    <a href="#" class="menu-item dropdown-toggle">
+                        <i class="fas fa-th-large"></i>
+                        Pages <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="pages/orders.php">Orders</a></li>
+                    </ul>
+                </div>
+                <a href="tests.php" class="menu-item">
+                    <i class="fas fa-microscope"></i>
+                    Tests
+                </a>
+                <a href="checkups.php" class="menu-item">
+                    <i class="fas fa-box"></i>
+                    Checkups
+                </a>
+                <a href="pages/cart.php" class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-dropdown">
+                    <a href="#" class="btn-support dropdown-toggle user-toggle" style="display: flex; align-items: center;">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="account-text">Account</span> <i class="fas fa-chevron-down" style="margin-left: 8px;"></i>
+                    </a>
+                    <ul class="dropdown-menu user-dropdown">
+                        <li><a href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li class="logged-in-only" style="display: none;"><a href="profile.php"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li class="logged-in-only" style="display: none;"><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-text-area">
+                <h2 class="hero-heading">Quality Diagnostics at Your Doorstep</h2>
+                <div class="quality-cards-grid">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="quality-text">
+                            <h3>Fast Results</h3>
+                            <p>Get your reports within 6 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="quality-text">
+                            <h3>Certified Labs</h3>
+                            <p>NABL accredited laboratory</p>
+                        </div>
+                    </div>
+                    
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="quality-text">
+                            <h3>Home Collection</h3>
+                            <p>Samples collected at your doorstep</p>
+                        </div>
+                    </div>
+                    
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="quality-text">
+                            <h3>Accurate Testing</h3>
+                            <p>Advanced equipment for precision</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-area">
+                <svg class="microscope-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+                    <!-- Base -->
+                    <ellipse class="microscope-base" cx="400" cy="730" rx="220" ry="40"/>
+                    
+                    <!-- Illuminator/Light source base -->
+                    <path class="microscope-illuminator-base" d="M350 730 L300 650 L500 650 L450 730 Z"/>
+                    
+                    <!-- Stage and body -->
+                    <rect class="microscope-body-lower" x="300" y="490" width="200" height="160" rx="10"/>
+                    
+                    <!-- Stage -->
+                    <path class="microscope-stage" d="M275 490 L525 490 L525 460 L275 460 Z"/>
+                    <rect class="microscope-stage-center" x="360" y="460" width="80" height="30"/>
+                    
+                    <!-- Stage clips -->
+                    <path class="microscope-clip-left" d="M320 460 L320 445 L340 445 L340 460 Z"/>
+                    <path class="microscope-clip-right" d="M460 460 L460 445 L480 445 L480 460 Z"/>
+                    
+                    <!-- Specimen slide -->
+                    <rect class="microscope-slide" x="350" y="450" width="100" height="5" fill="#A9CCE3" opacity="0.8"/>
+                    
+                    <!-- Arm -->
+                    <path class="microscope-arm" d="M370 460 L430 460 L430 350 L380 290 L320 290 L320 350 L370 350 Z"/>
+                    
+                    <!-- Fine adjustment knob -->
+                    <circle class="microscope-knob-fine" cx="240" cy="490" r="30"/>
+                    <circle class="microscope-knob-fine-center" cx="240" cy="490" r="10" fill="#34495E"/>
+                    
+                    <!-- Coarse adjustment knob -->
+                    <circle class="microscope-knob-coarse" cx="240" cy="550" r="40"/>
+                    <circle class="microscope-knob-coarse-center" cx="240" cy="550" r="15" fill="#34495E"/>
+                    
+                    <!-- Illuminator knob -->
+                    <circle class="microscope-knob-light" cx="520" cy="520" r="25"/>
+                    <circle class="microscope-knob-light-center" cx="520" cy="520" r="8" fill="#34495E"/>
+                    
+                    <!-- Tube -->
+                    <path class="microscope-tube" d="M370 350 L320 350 L320 290 L380 290 L380 150 L420 150 L420 290 L370 290 Z"/>
+                    
+                    <!-- Eyepiece -->
+                    <path class="microscope-eyepiece" d="M380 150 L420 150 L430 100 L370 100 Z"/>
+                    <ellipse class="microscope-eyepiece-lens" cx="400" cy="100" rx="30" ry="10"/>
+                    
+                    <!-- Nosepiece -->
+                    <path class="microscope-nosepiece" d="M370 350 L430 350 L430 380 C430 397 415 410 400 410 C385 410 370 397 370 380 Z"/>
+                    
+                    <!-- Objective lenses -->
+                    <g class="microscope-objectives">
+                        <!-- Main objective -->
+                        <path class="microscope-objective-main" d="M390 410 L410 410 L410 450 L390 450 Z"/>
+                        <ellipse class="microscope-objective-lens" cx="400" cy="450" rx="10" ry="5"/>
+                        
+                        <!-- Side objectives -->
+                        <path class="microscope-objective-side" d="M370 400 L385 385 L385 405 L370 420 Z" transform="rotate(-10 370 400)"/>
+                        <path class="microscope-objective-side" d="M430 400 L415 385 L415 405 L430 420 Z" transform="rotate(10 430 400)"/>
+                    </g>
+                    
+                    <!-- Light path visualization -->
+                    <path class="microscope-light-path" d="M400 450 L400 500" stroke="#F1C40F" stroke-width="3" stroke-dasharray="5,5" opacity="0.7"/>
+                    <circle class="microscope-light-source" cx="400" cy="600" r="15" fill="#F1C40F" opacity="0.7"/>
+                    <path class="microscope-light-rays" d="M385 585 L415 585 L415 615 L385 615 Z" fill="#F1C40F" opacity="0.3"/>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- Search Container -->
+        <div class="container">
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search for tests or checkups">
+                    <button class="search-icon-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-buttons">
+                    <button class="btn-search orange">
+                        <i class="fas fa-microscope"></i>
+                        Lab Tests
+                    </button>
+                    <button class="btn-search green">
+                        <i class="fas fa-box"></i>
+                        Checkups
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Promo Tag -->
+            <div style="text-align: center; margin-top: 20px;">
+                <div class="promo-tag">
+                    Get <span class="highlight">15% OFF*</span> on orders above ₹500 | Use: <span class="highlight">GKLAB15</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose GK Lab</h2>
+            
+            <div class="features-slider">
+                <div class="features-container" id="features-slider-container" style="display: flex; flex-direction: row; flex-wrap: nowrap; overflow: hidden;">
+                    <div class="feature-item" style="flex: 0 0 100%; min-width: 100%;">
+                        <div class="feature-icon-container">
+                            <div class="feature-icon orange">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" style="white-space: nowrap;">Certified Labs</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" style="flex: 0 0 100%; min-width: 100%;">
+                        <div class="feature-icon-container">
+                            <div class="feature-icon green">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" style="white-space: nowrap;">Quick Collection</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" style="flex: 0 0 100%; min-width: 100%;">
+                        <div class="feature-icon-container">
+                            <div class="feature-icon orange">
+                                <i class="fas fa-file-medical-alt"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" style="white-space: nowrap;">Fast Reports</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item" style="flex: 0 0 100%; min-width: 100%;">
+                        <div class="feature-icon-container">
+                            <div class="feature-icon green">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title" style="white-space: nowrap;">Secure Testing</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile navigation dots -->
+                <div class="features-dots">
+                    <span class="feature-dot active" data-index="0"></span>
+                    <span class="feature-dot" data-index="1"></span>
+                    <span class="feature-dot" data-index="2"></span>
+                    <span class="feature-dot" data-index="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Body Tests Section -->
+    <section class="checkups-section">
+        <div class="container">
+            <h2 class="section-title">Essential Health Tests</h2>
+            
+            <div class="checkups-slider">
+                <div class="slider-container" id="tests-slider-container">
+                    <!-- Test Card 1 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Test</div>
+                            <h3 class="checkup-title">Complete Blood Count</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 890</span>
+                                <span class="discounted-price">₹ 399</span>
+                                <span class="discount-badge">55% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">28</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">6 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-test-id="1">View Details</button>
+                                <button class="btn-add-cart" data-item-id="1" data-item-name="Complete Blood Count" data-item-price="399" data-item-type="Test">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Test Card 2 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Test</div>
+                            <h3 class="checkup-title">Vitamin D & B12 Combo</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 2300</span>
+                                <span class="discounted-price">₹ 999</span>
+                                <span class="discount-badge">57% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">2</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">8 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-test-id="2">View Details</button>
+                                <button class="btn-add-cart" data-item-id="2" data-item-name="Vitamin D & B12 Combo" data-item-price="999" data-item-type="Test">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Test Card 3 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Test</div>
+                            <h3 class="checkup-title">Thyroid Profile Total</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 1500</span>
+                                <span class="discounted-price">₹ 599</span>
+                                <span class="discount-badge">60% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">5</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">6 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-test-id="3">View Details</button>
+                                <button class="btn-add-cart" data-item-id="3" data-item-name="Thyroid Profile Total" data-item-price="599" data-item-type="Test">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Test Card 4 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Test</div>
+                            <h3 class="checkup-title">Diabetes Screening</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 1100</span>
+                                <span class="discounted-price">₹ 499</span>
+                                <span class="discount-badge">55% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">3</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">6 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-test-id="4">View Details</button>
+                                <button class="btn-add-cart" data-item-id="4" data-item-name="Diabetes Screening" data-item-price="499" data-item-type="Test">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Navigation -->
+                <div class="slider-navigation">
+                    <div class="slider-arrow" id="test-slider-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-indicator" id="tests-slider-dots">
+                        <div class="indicator-dot active"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                    </div>
+                    <div class="slider-arrow" id="test-slider-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-container">
+                <a href="tests.php" class="btn-view-all">View All Tests</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Health Checkups Section -->
+    <section class="checkups-section">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Checkup Packages</h2>
+            
+            <div class="checkups-slider">
+                <div class="slider-container" id="checkups-slider-container">
+                    <!-- Checkup Card 1 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Checkup</div>
+                            <h3 class="checkup-title">Full Body Checkup - Essential</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 6163</span>
+                                <span class="discounted-price">₹ 1499</span>
+                                <span class="discount-badge">76% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">91</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">7 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-checkup-id="1">View Details</button>
+                                <button class="btn-add-cart" data-item-id="c1" data-item-name="Full Body Checkup - Essential" data-item-price="1499" data-item-type="Checkup">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Checkup Card 2 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Checkup</div>
+                            <h3 class="checkup-title">Orange Health Tax Saver Checkup</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 17993</span>
+                                <span class="discounted-price">₹ 5000</span>
+                                <span class="discount-badge">72% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">109</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">12 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-checkup-id="2">View Details</button>
+                                <button class="btn-add-cart" data-item-id="c2" data-item-name="Orange Health Tax Saver Checkup" data-item-price="5000" data-item-type="Checkup">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Checkup Card 3 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Checkup</div>
+                            <h3 class="checkup-title">Full Body Checkup - Advanced</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 8433</span>
+                                <span class="discounted-price">₹ 2699</span>
+                                <span class="discount-badge">68% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">100</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">7 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-checkup-id="3">View Details</button>
+                                <button class="btn-add-cart" data-item-id="c3" data-item-name="Full Body Checkup - Advanced" data-item-price="2699" data-item-type="Checkup">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Checkup Card 4 -->
+                    <div class="checkup-card">
+                        <div class="checkup-header">
+                            <div class="checkup-badge">Checkup</div>
+                            <h3 class="checkup-title">Full Body Checkup - Comprehensive</h3>
+                            <div class="checkup-price">
+                                <span class="original-price">₹ 12503</span>
+                                <span class="discounted-price">₹ 3699</span>
+                                <span class="discount-badge">70% Off</span>
+                            </div>
+                        </div>
+                        <div class="checkup-content">
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-vial"></i>
+                                    </div>
+                                    <span>Parameters included</span>
+                                </div>
+                                <div class="detail-value">105</div>
+                            </div>
+                            <div class="detail-row">
+                                <div class="detail-info">
+                                    <div class="detail-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <span>Reports within</span>
+                                </div>
+                                <div class="detail-value">12 hours</div>
+                            </div>
+                            <div class="checkup-actions">
+                                <button class="btn-details" data-checkup-id="4">View Details</button>
+                                <button class="btn-add-cart" data-item-id="c4" data-item-name="Full Body Checkup - Comprehensive" data-item-price="3699" data-item-type="Checkup">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Navigation -->
+                <div class="slider-navigation">
+                    <div class="slider-arrow" id="slider-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-indicator" id="checkups-slider-dots">
+                        <div class="indicator-dot active"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                    </div>
+                    <div class="slider-arrow" id="slider-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-container">
+                <a href="checkups.php" class="btn-view-all">View All Checkups</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Checkup Details Popups -->
+    <div class="popup-overlay" id="checkup-popup-1">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Full Body Checkup - Essential</h3>
+                <div class="popup-subtitle">Comprehensive health assessment for adults (18+ years)</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 6163</span>
+                    <span class="discounted-price">₹ 1499</span>
+                    <span class="discount-badge">76% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood, Urine</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">7 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">Yes, 10-12 hours (water permitted)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood, Urine</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">18+ years</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>The Full Body Checkup - Essential is a comprehensive health screening package that evaluates key health parameters. It includes tests for liver function, kidney function, complete blood count, lipid profile, diabetes screening, thyroid function, vitamin deficiencies, and more.</p>
+                    <p>This package is ideal for adults who want to monitor their overall health status or who have a family history of lifestyle diseases.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (91)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">Complete Hemogram</div>
+                        <div class="parameter-item">Liver Function Test</div>
+                        <div class="parameter-item">Kidney Function Test</div>
+                        <div class="parameter-item">Lipid Profile</div>
+                        <div class="parameter-item">Blood Glucose (Fasting)</div>
+                        <div class="parameter-item">Blood Glucose (PP)</div>
+                        <div class="parameter-item">HbA1c</div>
+                        <div class="parameter-item">Thyroid Profile</div>
+                        <div class="parameter-item">Vitamin B12</div>
+                        <div class="parameter-item">Vitamin D</div>
+                        <div class="parameter-item">Iron Studies</div>
+                        <div class="parameter-item">Urine Routine & Microscopy</div>
+                        <!-- More parameters can be added here -->
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Preparation Required</h4>
+                    <ul>
+                        <li>10-12 hours fasting required (water permitted)</li>
+                        <li>Avoid alcohol consumption for 24 hours before the test</li>
+                        <li>Avoid strenuous exercise 24 hours before the test</li>
+                        <li>Inform the technician about any medications you are taking</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="1" data-item-name="Full Body Checkup - Essential" data-item-price="1499" data-item-type="Checkup">Add to Cart - ₹ 1499</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Additional popups for other checkups can be added similarly -->
+    <div class="popup-overlay" id="checkup-popup-2">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Orange Health Tax Saver Checkup</h3>
+                <div class="popup-subtitle">Complete health assessment with tax benefits under section 80D</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 17993</span>
+                    <span class="discounted-price">₹ 5000</span>
+                    <span class="discount-badge">72% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood, Urine, ECG</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">12 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">Yes, 12 hours (water permitted)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood, Urine</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">18+ years</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Tax Benefits</div>
+                        <div class="info-value">Eligible under Section 80D</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>The Orange Health Tax Saver Checkup is a comprehensive preventive health checkup package that provides tax benefits under Section 80D of the Income Tax Act. This extensive health assessment evaluates multiple body systems for any potential health concerns.</p>
+                    <p>This package includes advanced tests for cardiovascular health, diabetes screening, organ function tests, infection markers, and complete hormone analysis. All reports come with doctor consultation for detailed analysis.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (109)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">Complete Hemogram</div>
+                        <div class="parameter-item">Liver Function Test</div>
+                        <div class="parameter-item">Kidney Function Test</div>
+                        <div class="parameter-item">Lipid Profile</div>
+                        <div class="parameter-item">Blood Glucose (Fasting)</div>
+                        <div class="parameter-item">Blood Glucose (PP)</div>
+                        <div class="parameter-item">HbA1c</div>
+                        <div class="parameter-item">Thyroid Profile</div>
+                        <div class="parameter-item">Vitamin B12</div>
+                        <div class="parameter-item">Vitamin D</div>
+                        <div class="parameter-item">Iron Studies</div>
+                        <div class="parameter-item">ECG</div>
+                        <div class="parameter-item">Tumor Markers</div>
+                        <div class="parameter-item">Cardiac Risk Markers</div>
+                        <div class="parameter-item">Hormone Panel</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Tax Benefits</h4>
+                    <p>This package is eligible for tax deduction under Section 80D of the Income Tax Act. You'll receive a tax-compliant bill that can be used to claim deduction during filing your income tax returns.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Preparation Required</h4>
+                    <ul>
+                        <li>12 hours fasting required (water permitted)</li>
+                        <li>Avoid alcohol consumption for 24 hours before the test</li>
+                        <li>Avoid strenuous exercise 24 hours before the test</li>
+                        <li>Bring your PAN card for tax benefit documentation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="2" data-item-name="Orange Health Tax Saver Checkup" data-item-price="5000" data-item-type="Checkup">Add to Cart - ₹ 5000</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-overlay" id="checkup-popup-3">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Full Body Checkup - Advanced</h3>
+                <div class="popup-subtitle">Comprehensive health assessment with advanced parameters</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 8433</span>
+                    <span class="discounted-price">₹ 2699</span>
+                    <span class="discount-badge">68% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood, Urine</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">7 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">Yes, 10-12 hours (water permitted)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood, Urine</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">18+ years</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>The Full Body Checkup - Advanced offers a more in-depth health screening compared to the Essential package. It includes additional specialized tests to provide a more detailed assessment of your health.</p>
+                    <p>This package is designed for adults who want a thorough health evaluation, particularly those with a family history of chronic diseases or those experiencing unexplained symptoms.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (100)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">Complete Hemogram</div>
+                        <div class="parameter-item">Liver Function Test</div>
+                        <div class="parameter-item">Kidney Function Test</div>
+                        <div class="parameter-item">Lipid Profile</div>
+                        <div class="parameter-item">Blood Glucose (Fasting)</div>
+                        <div class="parameter-item">Blood Glucose (PP)</div>
+                        <div class="parameter-item">HbA1c</div>
+                        <div class="parameter-item">Thyroid Profile</div>
+                        <div class="parameter-item">Vitamin B12</div>
+                        <div class="parameter-item">Vitamin D</div>
+                        <div class="parameter-item">Iron Studies</div>
+                        <div class="parameter-item">Urine Routine & Microscopy</div>
+                        <div class="parameter-item">Calcium & Electrolytes</div>
+                        <div class="parameter-item">CRP (Inflammatory Marker)</div>
+                        <div class="parameter-item">Uric Acid</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Preparation Required</h4>
+                    <ul>
+                        <li>10-12 hours fasting required (water permitted)</li>
+                        <li>Avoid alcohol consumption for 24 hours before the test</li>
+                        <li>Avoid strenuous exercise 24 hours before the test</li>
+                        <li>Inform the technician about any medications you are taking</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="3" data-item-name="Full Body Checkup - Advanced" data-item-price="2699" data-item-type="Checkup">Add to Cart - ₹ 2699</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-overlay" id="checkup-popup-4">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Full Body Checkup - Comprehensive</h3>
+                <div class="popup-subtitle">Complete health evaluation with specialized biomarkers</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 12503</span>
+                    <span class="discounted-price">₹ 3699</span>
+                    <span class="discount-badge">70% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood, Urine, Cardiac</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">12 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">Yes, 12 hours (water permitted)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood, Urine</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">18+ years</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>The Full Body Checkup - Comprehensive is our most detailed health evaluation package, featuring 105 specialized tests including advanced cardiac risk markers, hormonal analysis, and detailed organ function assessments.</p>
+                    <p>This package is ideal for individuals over 40, those with existing health conditions, or anyone wanting the most thorough health screening available. It includes doctor consultation to analyze your results and provide personalized health recommendations.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (105)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">Complete Hemogram</div>
+                        <div class="parameter-item">Liver Function Test</div>
+                        <div class="parameter-item">Kidney Function Test</div>
+                        <div class="parameter-item">Lipid Profile</div>
+                        <div class="parameter-item">Blood Glucose (Fasting)</div>
+                        <div class="parameter-item">Blood Glucose (PP)</div>
+                        <div class="parameter-item">HbA1c</div>
+                        <div class="parameter-item">Thyroid Profile</div>
+                        <div class="parameter-item">Vitamin B12</div>
+                        <div class="parameter-item">Vitamin D</div>
+                        <div class="parameter-item">Iron Studies</div>
+                        <div class="parameter-item">Urine Routine & Microscopy</div>
+                        <div class="parameter-item">Homocysteine</div>
+                        <div class="parameter-item">hs-CRP</div>
+                        <div class="parameter-item">Testosterone</div>
+                        <div class="parameter-item">Cardiac Risk Markers</div>
+                        <div class="parameter-item">Advanced Liver Function</div>
+                        <div class="parameter-item">Cancer Screening Markers</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Preparation Required</h4>
+                    <ul>
+                        <li>12 hours fasting required (water permitted)</li>
+                        <li>Avoid alcohol consumption for 48 hours before the test</li>
+                        <li>Avoid strenuous exercise 24 hours before the test</li>
+                        <li>Inform the technician about any medications you are taking</li>
+                        <li>Bring previous medical records if available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="4" data-item-name="Full Body Checkup - Comprehensive" data-item-price="3699" data-item-type="Checkup">Add to Cart - ₹ 3699</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Details Popups -->
+    <div class="popup-overlay" id="test-popup-1">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Complete Blood Count (CBC)</h3>
+                <div class="popup-subtitle">Comprehensive blood test that evaluates blood cells</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 890</span>
+                    <span class="discounted-price">₹ 399</span>
+                    <span class="discount-badge">55% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">6 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">No</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">All ages</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>Complete Blood Count (CBC) is a blood test that evaluates your overall health and detects a wide range of disorders including anemia, infection, and leukemia. It measures several components of your blood including red blood cells, white blood cells, hemoglobin, and platelets.</p>
+                    <p>This test is often used as a screening test during routine medical examinations and can help detect various diseases that affect blood cells.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (28)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">Hemoglobin</div>
+                        <div class="parameter-item">Red Blood Cell Count</div>
+                        <div class="parameter-item">White Blood Cell Count</div>
+                        <div class="parameter-item">Platelet Count</div>
+                        <div class="parameter-item">Hematocrit</div>
+                        <div class="parameter-item">MCV</div>
+                        <div class="parameter-item">MCH</div>
+                        <div class="parameter-item">MCHC</div>
+                        <div class="parameter-item">RDW</div>
+                        <div class="parameter-item">Neutrophils</div>
+                        <div class="parameter-item">Lymphocytes</div>
+                        <div class="parameter-item">Monocytes</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">When to Take This Test</h4>
+                    <ul>
+                        <li>As part of a routine health checkup</li>
+                        <li>When experiencing unexplained fatigue or weakness</li>
+                        <li>If you have signs of infection</li>
+                        <li>If you're experiencing unusual bruising or bleeding</li>
+                        <li>Before surgery or medical procedures</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="5" data-item-name="Complete Blood Count (CBC)" data-item-price="399" data-item-type="Test">Add to Cart - ₹ 399</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-overlay" id="test-popup-2">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Vitamin D & B12 Combo</h3>
+                <div class="popup-subtitle">Essential vitamin level assessment</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 2300</span>
+                    <span class="discounted-price">₹ 999</span>
+                    <span class="discount-badge">57% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">8 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">Yes, 8-10 hours (water permitted)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">All ages</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>The Vitamin D & B12 Combo test measures the levels of two essential vitamins in your body. Vitamin D is crucial for bone health and immune function, while Vitamin B12 is important for nerve function, red blood cell formation, and energy production.</p>
+                    <p>This combo test is ideal for individuals experiencing fatigue, weakness, or those who may be at risk of deficiency due to dietary restrictions, age, or certain medical conditions.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (2)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">Vitamin D (25-Hydroxy)</div>
+                        <div class="parameter-item">Vitamin B12 (Cobalamin)</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">When to Take This Test</h4>
+                    <ul>
+                        <li>If you're experiencing unexplained fatigue or weakness</li>
+                        <li>If you follow a vegetarian or vegan diet (B12 deficiency risk)</li>
+                        <li>If you have limited sun exposure (Vitamin D deficiency risk)</li>
+                        <li>For adults over 50 years of age</li>
+                        <li>If you have digestive disorders affecting nutrient absorption</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="6" data-item-name="Vitamin D & B12 Combo" data-item-price="999" data-item-type="Test">Add to Cart - ₹ 999</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-overlay" id="test-popup-3">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Thyroid Profile Total</h3>
+                <div class="popup-subtitle">Comprehensive thyroid function assessment</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 1500</span>
+                    <span class="discounted-price">₹ 599</span>
+                    <span class="discount-badge">60% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">6 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">Yes, 8-10 hours (water permitted)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">All ages</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>The Thyroid Profile Total test evaluates how well your thyroid gland is functioning by measuring the levels of thyroid hormones in your blood. The thyroid gland regulates metabolism, energy production, and affects various body functions.</p>
+                    <p>This comprehensive profile helps diagnose thyroid disorders such as hypothyroidism (underactive thyroid) or hyperthyroidism (overactive thyroid), which can affect growth, development, and many body functions.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (5)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">TSH (Thyroid Stimulating Hormone)</div>
+                        <div class="parameter-item">T3 (Triiodothyronine)</div>
+                        <div class="parameter-item">T4 (Thyroxine)</div>
+                        <div class="parameter-item">Free T3</div>
+                        <div class="parameter-item">Free T4</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">When to Take This Test</h4>
+                    <ul>
+                        <li>If you have symptoms of thyroid disorders (fatigue, weight changes, hair loss)</li>
+                        <li>If you have a family history of thyroid disease</li>
+                        <li>For women experiencing fertility issues or irregular periods</li>
+                        <li>During pregnancy or postpartum period</li>
+                        <li>For monitoring existing thyroid conditions and medication effectiveness</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="7" data-item-name="Thyroid Profile Total" data-item-price="599" data-item-type="Test">Add to Cart - ₹ 599</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup-overlay" id="test-popup-4">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 class="popup-title">Diabetes Screening</h3>
+                <div class="popup-subtitle">Essential blood glucose assessment</div>
+                <div class="popup-price">
+                    <span class="original-price">₹ 1100</span>
+                    <span class="discounted-price">₹ 499</span>
+                    <span class="discount-badge">55% Off</span>
+                </div>
+                <div class="popup-close"><i class="fas fa-times"></i></div>
+            </div>
+            <div class="popup-body">
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Overview</h4>
+                    <div class="info-row">
+                        <div class="info-label">Test Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Report Time</div>
+                        <div class="info-value">6 hours after sample collection</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Fasting Required</div>
+                        <div class="info-value">Yes, 8-12 hours (water permitted)</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Sample Type</div>
+                        <div class="info-value">Blood</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Age Group</div>
+                        <div class="info-value">Adults (18+ years)</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Description</h4>
+                    <p>The Diabetes Screening test measures your blood glucose levels to help identify diabetes or prediabetes. This test includes fasting blood glucose, postprandial glucose, and HbA1c which provides information about your average blood glucose levels over the past 2-3 months.</p>
+                    <p>Early detection of diabetes is crucial for preventing complications and managing the condition effectively. This screening is especially important for individuals with risk factors such as family history, obesity, or sedentary lifestyle.</p>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">Parameters Included (3)</h4>
+                    <div class="parameters-grid">
+                        <div class="parameter-item">Fasting Blood Glucose</div>
+                        <div class="parameter-item">Post Prandial Blood Glucose</div>
+                        <div class="parameter-item">HbA1c (Glycated Hemoglobin)</div>
+                    </div>
+                </div>
+                
+                <div class="popup-section">
+                    <h4 class="popup-section-title">When to Take This Test</h4>
+                    <ul>
+                        <li>As part of an annual health checkup, especially after age 45</li>
+                        <li>If you have symptoms of diabetes (frequent urination, increased thirst)</li>
+                        <li>If you have a family history of diabetes</li>
+                        <li>If you are overweight or obese</li>
+                        <li>If you have high blood pressure or high cholesterol</li>
+                        <li>For women with a history of gestational diabetes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="popup-btn add-to-cart-popup" data-item-id="8" data-item-name="Diabetes Screening" data-item-price="499" data-item-type="Test">Add to Cart - ₹ 499</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Popular Health Assessments</h2>
+            
+            <div class="category-grid">
+                <div class="category-box orange" data-category="fullbody" data-target="checkups">
+                    <i class="fas fa-heartbeat category-icon"></i>
+                    <h3 class="category-title">Full Body Checkup</h3>
+                    <div class="category-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="category-box green" data-category="sexual" data-target="tests">
+                    <i class="fas fa-venus category-icon"></i>
+                    <h3 class="category-title">Sexual Health</h3>
+                    <div class="category-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="category-box green" data-category="women" data-target="checkups">
+                    <i class="fas fa-female category-icon"></i>
+                    <h3 class="category-title">Women's Health</h3>
+                    <div class="category-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+                
+                <div class="category-box orange" data-category="allergy" data-target="tests">
+                    <i class="fas fa-bacteria category-icon"></i>
+                    <h3 class="category-title">Allergy Checkup</h3>
+                    <div class="category-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-container">
+                <a href="checkups.php" class="btn-view-all">View All Checkups</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Banner Section -->
+    <section class="promo-banner-section">
+        <div class="container">
+            <!-- Appointment Booking Banner -->
+            <div class="promo-banner appointment-banner">
+                <div class="promo-content">
+                    <h2 class="promo-title">SCHEDULE YOUR<br>HEALTH CHECKUP</h2>
+                    <div class="promo-text">Easy online booking, flexible time slots</div>
+                    <a href="javascript:void(0);" class="promo-btn" id="book-appointment-btn">
+                        Book Appointment <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="promo-image">
+                    <!-- Calendar/Appointment SVG Icon -->
+                    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="appointment-svg">
+                        <!-- Calendar base -->
+                        <rect x="25" y="40" width="150" height="140" rx="8" fill="#FFFFFF" stroke="#16A085" stroke-width="4"/>
+                        <!-- Calendar header -->
+                        <rect x="25" y="40" width="150" height="30" rx="8" fill="#16A085"/>
+                        <!-- Calendar days/tabs at top -->
+                        <rect x="40" y="30" width="10" height="20" rx="2" fill="#16A085"/>
+                        <rect x="70" y="30" width="10" height="20" rx="2" fill="#16A085"/>
+                        <rect x="100" y="30" width="10" height="20" rx="2" fill="#16A085"/>
+                        <rect x="130" y="30" width="10" height="20" rx="2" fill="#16A085"/>
+                        <rect x="160" y="30" width="10" height="20" rx="2" fill="#16A085"/>
+                        
+                        <!-- Calendar grid lines -->
+                        <line x1="25" y1="90" x2="175" y2="90" stroke="#E0E0E0" stroke-width="2"/>
+                        <line x1="25" y1="120" x2="175" y2="120" stroke="#E0E0E0" stroke-width="2"/>
+                        <line x1="25" y1="150" x2="175" y2="150" stroke="#E0E0E0" stroke-width="2"/>
+                        <line x1="65" y1="70" x2="65" y2="180" stroke="#E0E0E0" stroke-width="2"/>
+                        <line x1="105" y1="70" x2="105" y2="180" stroke="#E0E0E0" stroke-width="2"/>
+                        <line x1="145" y1="70" x2="145" y2="180" stroke="#E0E0E0" stroke-width="2"/>
+                        
+                        <!-- Selected day with checkmark -->
+                        <circle cx="85" cy="105" r="15" fill="#FF8A00" opacity="0.8"/>
+                        <text x="85" y="110" font-family="Arial" font-size="14" fill="white" text-anchor="middle">15</text>
+                        
+                        <!-- Checkmark/appointmemt indicator -->
+                        <circle cx="125" cy="135" r="15" fill="#16A085" opacity="0.8"/>
+                        <path d="M118 135 L123 140 L133 130" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <!-- Doctor stethoscope icon -->
+                        <circle cx="45" cy="165" r="12" fill="#FFB156" opacity="0.7"/>
+                        <path d="M40 165 C42 160, 48 160, 50 165" stroke="#333" stroke-width="2" fill="none"/>
+                        <line x1="45" y1="165" x2="45" y2="173" stroke="#333" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Vital Body Organs Section -->
+    <section class="organs-section">
+        <div class="container">
+            <h2 class="section-title">Specialized Organ Care</h2>
+
+            <!-- Organs Service Banners Slider -->
+            <div class="organs-banner-slider">
+                <div class="organs-banner-track">
+                    <div class="organs-banner">
+                        <div class="organs-banner-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="organs-banner-content">
+                            <h3>Heart Health Packages</h3>
+                            <p>Comprehensive tests for cardiac health and early risk detection.</p>
+                        </div>
+                    </div>
+                    <div class="organs-banner">
+                        <div class="organs-banner-icon"><i class="fas fa-tint"></i></div>
+                        <div class="organs-banner-content">
+                            <h3>Kidney Function</h3>
+                            <p>Advanced diagnostics for kidney performance and filtration.</p>
+                        </div>
+                    </div>
+                    <div class="organs-banner">
+                        <div class="organs-banner-icon"><i class="fas fa-liver"></i></div>
+                        <div class="organs-banner-content">
+                            <h3>Liver Screening</h3>
+                            <p>Monitor liver enzymes and overall liver health with precision.</p>
+                        </div>
+                    </div>
+                    <div class="organs-banner">
+                        <div class="organs-banner-icon"><i class="fas fa-bone"></i></div>
+                        <div class="organs-banner-content">
+                            <h3>Bone & Joint Care</h3>
+                            <p>Bone density and vitamin D tests for strong bones and joints.</p>
+                        </div>
+                    </div>
+                    <div class="organs-banner">
+                        <div class="organs-banner-icon"><i class="fas fa-dna"></i></div>
+                        <div class="organs-banner-content">
+                            <h3>Hormone & Metabolism</h3>
+                            <p>Thyroid, hormone, and metabolic panels for total wellness.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="organs-banner-dots">
+                    <span class="organs-banner-dot active" data-index="0"></span>
+                    <span class="organs-banner-dot" data-index="1"></span>
+                    <span class="organs-banner-dot" data-index="2"></span>
+                    <span class="organs-banner-dot" data-index="3"></span>
+                    <span class="organs-banner-dot" data-index="4"></span>
+                </div>
+            </div>
+
+            <div class="organs-grid">
+                <!-- Single card containing 3x3 grid using table structure -->
+                <div class="organs-card">
+                    <table class="organs-table">
+                        <tbody>
+                            <!-- Row 1 - Keep as is -->
+                            <tr>
+                                <td>
+                                    <div class="organ-cell" data-category="heart">
+                                        <img src="assets/images/organ-heart.svg" alt="Heart" class="organ-icon" id="heart-icon-placeholder">
+                                        <div class="organ-name">Heart</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="organ-cell" data-category="kidney">
+                                        <img src="assets/images/organ-kidney.svg" alt="Kidney" class="organ-icon" id="kidney-icon-placeholder">
+                                        <div class="organ-name">Kidney</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="organ-cell" data-category="liver">
+                                        <img src="assets/images/organ-liver.svg" alt="Liver" class="organ-icon" id="liver-icon-placeholder">
+                                        <div class="organ-name">Liver</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Row 2 - Replace with embedded SVGs -->
+                            <tr>
+                                <td>
+                                    <div class="organ-cell">
+                                        <!-- Bone Icon SVG -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 80 80" class="organ-icon">
+                                            <rect width="80" height="80" rx="40" fill="#16A085" opacity="0.1"/>
+                                            <path d="M30,20 C35,15 40,20 40,25 L40,55 C40,60 35,65 30,60 C25,55 25,50 30,45 C25,40 25,35 30,30 C25,25 25,20 30,20 Z" fill="#16A085"/>
+                                        </svg>
+                                        <div class="organ-name">Bone</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="organ-cell" data-category="vitamin">
+                                        <!-- Vitamin Icon SVG -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 80 80" class="organ-icon">
+                                            <rect width="80" height="80" rx="40" fill="#16A085" opacity="0.1"/>
+                                            <circle cx="40" cy="40" r="15" fill="#16A085"/>
+                                            <text x="40" y="45" font-family="Arial" font-size="16" text-anchor="middle" fill="white">D</text>
+                                        </svg>
+                                        <div class="organ-name">Vitamin</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="organ-cell">
+                                        <!-- Hormones Icon SVG -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 80 80" class="organ-icon">
+                                            <rect width="80" height="80" rx="40" fill="#16A085" opacity="0.1"/>
+                                            <path d="M30,25 L50,25 L50,40 C50,50 40,60 30,40 L30,25 Z" fill="#16A085"/>
+                                            <circle cx="40" cy="20" r="5" fill="#16A085"/>
+                                        </svg>
+                                        <div class="organ-name">Hormones</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <!-- Row 3 - Replace with embedded SVGs -->
+                            <tr>
+                                <td>
+                                    <div class="organ-cell">
+                                        <!-- Gut Health Icon SVG -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 80 80" class="organ-icon">
+                                            <rect width="80" height="80" rx="40" fill="#16A085" opacity="0.1"/>
+                                            <path d="M30,25 C50,25 50,35 30,35 C50,35 50,45 30,45 C50,45 50,55 30,55" stroke="#16A085" stroke-width="5" fill="none"/>
+                                        </svg>
+                                        <div class="organ-name">Gut Health</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="organ-cell" data-category="blood">
+                                        <!-- Blood Icon SVG -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 80 80" class="organ-icon">
+                                            <rect width="80" height="80" rx="40" fill="#16A085" opacity="0.1"/>
+                                            <path d="M40,20 C50,30 60,40 40,60 C20,40 30,30 40,20 Z" fill="#D32F2F"/>
+                                        </svg>
+                                        <div class="organ-name">Blood</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="organ-cell">
+                                        <!-- Reproductive Icon SVG -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 80 80" class="organ-icon">
+                                            <rect width="80" height="80" rx="40" fill="#16A085" opacity="0.1"/>
+                                            <circle cx="40" cy="30" r="10" stroke="#16A085" stroke-width="3" fill="none"/>
+                                            <path d="M40,40 L40,60 M30,50 L50,50" stroke="#16A085" stroke-width="3"/>
+                                        </svg>
+                                        <div class="organ-name">Reproductive</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="view-all-container">
+                <a href="pages/organs.html" class="btn-view-all">View All Checkups</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <!-- SVG logo directly embedded -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="180" height="60">
+                          <defs>
+                            <linearGradient id="flaskGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#16A085"/>
+                              <stop offset="100%" stop-color="#107C67"/>
+                            </linearGradient>
+                          </defs>
+                          
+                          <!-- Main Flask -->
+                          <path d="M50 15 v12 L30 65 c-1 2 0 5 3 5 h34 c3 0 4-3 3-5 L50 27 v-12 z" 
+                                fill="white" stroke="url(#flaskGradient)" stroke-width="2.5"/>
+                          
+                          <!-- Flask liquid -->
+                          <path d="M50 40 L38 62 c-1 2 0 4 3 4 h18 c3 0 4-2 3-4 L50 40z" 
+                                fill="url(#flaskGradient)" opacity="0.3"/>
+                          
+                          <!-- Flask top -->
+                          <rect x="45" y="10" width="10" height="5" rx="2" fill="url(#flaskGradient)"/>
+                          
+                          <!-- Bubbles in flask -->
+                          <circle cx="43" cy="50" r="3" fill="url(#flaskGradient)" opacity="0.6"/>
+                          <circle cx="55" cy="45" r="2" fill="url(#flaskGradient)" opacity="0.6"/>
+                          <circle cx="47" cy="55" r="1.5" fill="url(#flaskGradient)" opacity="0.6"/>
+                          
+                          <!-- Text: GK LAB -->
+                          <text x="85" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#16A085">
+                            GK LAB
+                          </text>
+                          <text x="85" y="58" font-family="Arial, sans-serif" font-size="12" fill="#555555">
+                            DIAGNOSTIC CENTER
+                          </text>
+                          
+                          <!-- DNA Helix Icon -->
+                          <g transform="translate(180, 40) scale(0.9)">
+                            <!-- DNA strand 1 -->
+                            <path d="M0,0 C5,5 15,5 20,0 C25,-5 35,-5 40,0" stroke="#16A085" stroke-width="2.5" fill="none"/>
+                            <!-- DNA strand 2 -->
+                            <path d="M0,10 C5,5 15,5 20,10 C25,15 35,15 40,10" stroke="#16A085" stroke-width="2.5" fill="none"/>
+                            <!-- Connecting lines -->
+                            <line x1="5" y1="2.5" x2="5" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                            <line x1="15" y1="2.5" x2="15" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                            <line x1="25" y1="2.5" x2="25" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                            <line x1="35" y1="2.5" x2="35" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                          </g>
+                        </svg>
+                    </div>
+                    <p class="footer-text">
+                        Experience the convenience of high-quality diagnostic laboratory services in the comfort of your home. We bring cutting-edge diagnostics right to your doorstep.
+                    </p>
+                    <div class="contact-info" style="margin-bottom: 15px;">
+                        <p style="margin: 5px 0;"><i class="fas fa-phone-alt"></i> 7620065204</p>
+                        <p style="margin: 5px 0;"><i class="fas fa-envelope"></i> kedargovind144@gmail.com</p>
+                        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt"></i> Kedar Clinical Laboratory, Ambajogai</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/xrohia/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="tests.php">Lab Tests</a></li>
+                        <li><a href="checkups.php">Health Checkups</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">For Patients</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/appointment.html">Book Appointment</a></li>
+                        <li><a href="pages/full-body-checkup.html">Full Body Checkup</a></li>
+                        <li><a href="pages/support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 GK Health Labs Pvt. Ltd. All rights reserved
+                </div>
+                <div class="policy-links">
+                    <a href="pages/terms.html" class="policy-link">Terms</a>
+                    <a href="pages/privacy.html" class="policy-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- Slider JavaScript -->
+    <script src="js/slider.js"></script>
+    <!-- PHP Cart JavaScript -->
+    <script src="js/php-cart.js"></script>
+    <!-- Search JavaScript -->
+    <script src="js/search.js"></script>
+    <script>
+        // Additional script to ensure mobile slider works properly
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit to ensure DOM is fully rendered
+            setTimeout(function() {
+                if (window.innerWidth < 768) {
+                    // Fix for test slider in mobile view
+                    const testSlider = document.getElementById('tests-slider-container');
+                    if (testSlider) {
+                        // Make sure all cards are visible in mobile view
+                        const testCards = testSlider.querySelectorAll('.checkup-card');
+                        testCards.forEach(card => {
+                            card.style.display = 'block';
+                        });
+                    }
+                    
+                    // Fix for checkups slider in mobile view
+                    const checkupsSlider = document.getElementById('checkups-slider-container');
+                    if (checkupsSlider) {
+                        // Make sure all cards are visible
+                        const checkupCards = checkupsSlider.querySelectorAll('.checkup-card');
+                        checkupCards.forEach(card => {
+                            card.style.display = 'block';
+                        });
+                    }
+                }
+            }, 500);
+        });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.organs-grid .organ-cell[data-category]').forEach(cell => {
+            cell.style.cursor = 'pointer';
+            cell.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                if (category) {
+                    window.location.href = `tests.php?category=${category}`;
+                }
+            });
+        });
+    });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.category-grid .category-box[data-category]').forEach(box => {
+            box.style.cursor = 'pointer';
+            box.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                const target = this.getAttribute('data-target');
+                if (category && target) {
+                    if (target === 'checkups') {
+                        window.location.href = `checkups.php?category=${category}`;
+                    } else if (target === 'tests') {
+                        window.location.href = `tests.php?category=${category}`;
+                    }
+                }
+            });
+        });
+    });
+    </script>
+    <!-- Cart handling script for index page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add event listeners to all Add to Cart buttons
+            document.querySelectorAll('.btn-add-cart, .add-to-cart-popup').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get item data from data attributes
+                    const id = this.getAttribute('data-item-id');
+                    const name = this.getAttribute('data-item-name');
+                    const price = this.getAttribute('data-item-price');
+                    const type = this.getAttribute('data-item-type');
+                    
+                    // Use the addToCartPHP function from php-cart.js
+                    if (typeof addToCartPHP === 'function') {
+                        addToCartPHP(id, name, price, type);
+                    } else {
+                        // Fallback if function not available
+                        window.location.href = `pages/cart.php?action=add&id=${encodeURIComponent(id)}&name=${encodeURIComponent(name)}&price=${encodeURIComponent(price)}&type=${encodeURIComponent(type)}`;
+                    }
+                    
+                    // Close the popup if it's in a popup
+                    const popupOverlay = this.closest('.popup-overlay');
+                    if (popupOverlay) {
+                        popupOverlay.style.display = 'none';
+                    }
+                    
+                    return false;
+                });
+            });
+        });
+    </script>
+    
+    <!-- User account dropdown handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check login status
+            fetch('check_login_status.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Get all menu items that should only be shown when logged in
+                    const loggedInItems = document.querySelectorAll('.logged-in-only');
+                    // Get all menu items that should only be shown when logged out
+                    const loggedOutItems = document.querySelectorAll('.logged-out-only');
+                    
+                    if (data.loggedIn) {
+                        // User is logged in
+                        loggedInItems.forEach(item => item.style.display = 'block');
+                        
+                        // Hide login/register options
+                        document.querySelector('a[href="login.php"]').parentElement.style.display = 'none';
+                        document.querySelector('a[href="register.php"]').parentElement.style.display = 'none';
+                        
+                        // Update account text to show user's name
+                        const accountText = document.getElementById('account-text');
+                        if (accountText && data.user_first_name) {
+                            accountText.textContent = data.user_first_name;
+                        }
+                    } else {
+                        // User is logged out
+                        loggedInItems.forEach(item => item.style.display = 'none');
+                        
+                        // Make sure login/register are visible
+                        document.querySelector('a[href="login.php"]').parentElement.style.display = 'block';
+                        document.querySelector('a[href="register.php"]').parentElement.style.display = 'block';
+                        
+                        // Reset account text
+                        const accountText = document.getElementById('account-text');
+                        if (accountText) {
+                            accountText.textContent = 'Account';
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking login status:', error);
+                });
+        });
+    </script>
+    
+    <!-- Appointment Popup Script -->
+    <script src="js/appointment-popup.js"></script>
+</body>
+</html>

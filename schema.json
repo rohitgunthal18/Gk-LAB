@@ -1,0 +1,171 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "GK Lab - Best Diagnostic Center in Latur",
+  "alternateName": "GK Lab Diagnostic Services",
+  "image": "https://gklab.com/assets/images/logo.jpg",
+  "url": "https://gklab.com",
+  "@id": "https://gklab.com/#organization",
+  "description": "GK Lab offers comprehensive medical tests, full body checkups and blood test at home services in Latur city with doorstep sample collection. Founded by Rohit Gunthal.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Latur Main Road",
+    "addressLocality": "Latur",
+    "addressRegion": "Maharashtra",
+    "postalCode": "413512",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.4088,
+    "longitude": 76.5604
+  },
+  "telephone": "+91-8408088454",
+  "email": "rohitgunthal1819@gmail.com",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/gklab",
+    "https://www.instagram.com/gk_lab/"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Medical Tests and Checkups in Latur",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Diagnostic Tests in Latur",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Complete Blood Count (CBC) Test in Latur",
+              "description": "Complete blood count test at home in Latur with doorstep sample collection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Blood Sugar Test at Home in Latur",
+              "description": "Diabetes testing and glucose level assessment with home collection in Latur city"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Lipid Profile Test in Latur",
+              "description": "Comprehensive cholesterol and lipid profile testing with same-day results in Latur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Thyroid Function Test in Latur",
+              "description": "Complete thyroid panel with home sample collection in Latur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Vitamin D Test in Latur",
+              "description": "Vitamin D deficiency testing with doorstep collection in Latur"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Health Checkup Packages in Latur",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Full Body Checkup in Latur",
+              "description": "Comprehensive full body health checkup package in Latur with home sample collection"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Advanced Health Checkup in Latur",
+              "description": "Advanced full body assessment with 100+ parameters for complete health evaluation in Latur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Diabetes Checkup Package in Latur",
+              "description": "Specialized diabetes screening and monitoring tests with home collection in Latur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Heart Health Checkup in Latur",
+              "description": "Cardiac risk assessment and heart health screening in Latur"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTest",
+              "name": "Senior Citizen Health Package in Latur",
+              "description": "Specialized health checkup for senior citizens with doorstep sample collection in Latur"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Rohit Gunthal",
+    "email": "rohitgunthal1819@gmail.com",
+    "telephone": "+91-8408088454",
+    "jobTitle": "Founder and CEO",
+    "description": "Rohit Gunthal is the founder and developer of GK Lab, a premier diagnostic center in Latur offering home collection services."
+  },
+  "foundingDate": "2022",
+  "slogan": "Quality diagnostic services at your doorstep in Latur",
+  "areaServed": {
+    "@type": "City",
+    "name": "Latur",
+    "containedIn": {
+      "@type": "State",
+      "name": "Maharashtra"
+    }
+  },
+  "award": "Best Diagnostic Service Provider in Latur 2023",
+  "specialty": "Home blood collection and full body checkups in Latur",
+  "knowsAbout": [
+    "Medical Diagnostics in Latur", 
+    "Full Body Health Screening", 
+    "Blood Tests at Home", 
+    "Laboratory Testing with Home Collection", 
+    "Pathology Services in Latur",
+    "Doorstep Sample Collection"
+  ],
+  "keywords": "full body checkup in latur, blood test at home latur, rohit gunthal, doorstep sample collection latur, pathology lab latur, diagnostic center latur"
+}

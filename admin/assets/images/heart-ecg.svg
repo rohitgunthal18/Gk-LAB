@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 300 250">
+  <!-- Background Grid Lines (optional) -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="300" height="250" fill="url(#grid)"/>
+  
+  <!-- ECG Wave Lines -->
+  <path d="M 0,120 L 50,120 60,120 65,60 75,180 85,100 95,120 250,120" 
+        stroke="#ffffff" 
+        stroke-width="2" 
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+  
+  <!-- Heart Shape -->
+  <path d="M 180,60 
+           C 180,40 200,20 230,40
+           C 260,20 280,40 280,60
+           C 280,120 230,150 180,180
+           C 130,150 80,120 80,60
+           C 80,40 100,20 130,40
+           C 160,20 180,40 180,60 Z" 
+        fill="#FF8A00" 
+        opacity="0.8"/>
+  
+  <!-- ECG Line over Heart -->
+  <path d="M 120,120 L 140,120 150,80 160,160 170,60 180,120 240,120" 
+        stroke="#ffffff" 
+        stroke-width="3" 
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg> 

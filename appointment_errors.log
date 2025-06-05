@@ -1,0 +1,197 @@
+[2025-05-15 08:35:04] Form submission data: {"name":"Rohit Gunthal","email":"rohitgunthal44@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"09:00 - 11:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 08:35:04] Exception occurred Error: Unknown column 'name' in 'field list'
+[2025-05-15 08:37:02] Form submission data: {"name":"Rohit Genital\u00a0","email":"rohitgunthal44@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 08:37:02] Exception occurred Error: Cannot add or update a child row: a foreign key constraint fails (`gk_lab`.`appointments`, CONSTRAINT `appointments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE)
+[2025-05-15 08:43:06] Form submission data: {"name":"Rohit Gunthal","email":"rohitgunthal44@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"09:00 - 11:00","test_type":"Full Body Checkup - Comprehensive","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 08:43:06] Appointment saved successfully for: Rohit Gunthal
+[2025-05-15 10:40:52] Form submission data: {"csrf_token":"a86668e58a09b4344c1587db7d542af9a2afb870fc46b703cd64472ec3bcfd33","name":"Rohit Gunthal","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"09:00 - 11:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 10:40:52] Exception occurred Error: Unknown column 'patient_name' in 'field list'
+[2025-05-15 10:56:09] Form submission data: {"csrf_token":"be3b6263bf6a87ea2318e0be10bc7474d8a95b5142838e14320fc310397815ba","name":"Rohit Genital\u00a0","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 10:56:09] Updated appointments table: renamed name to patient_name
+[2025-05-15 10:56:09] Updated appointments table: renamed email to patient_email
+[2025-05-15 10:56:09] Updated appointments table: renamed phone to patient_phone
+[2025-05-15 10:56:09] Exception occurred Error: Duplicate column name 'appointment_time'
+[2025-05-15 10:57:59] Form submission data: {"csrf_token":"2c2266fb6a77bf00ddfe1d02ff9d4cb65f08ba76f20c1f2f97ae6ebe2f11a1e0","name":"Rohit Genital\u00a0","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 10:57:59] Exception occurred Error: Unknown column 'test_ids' in 'field list'
+[2025-05-15 10:58:04] Form submission data: {"csrf_token":"7cedf90491caf9c1792bb57f2415bde9d7522d913589cb3c03f2405d5900a013","name":"Rohit Genital\u00a0","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":"hi"}
+[2025-05-15 10:58:04] Exception occurred Error: Unknown column 'test_ids' in 'field list'
+[2025-05-15 10:58:30] Form submission data: {"csrf_token":"cf7ded98730b41286643072dbb1cba55b07ccebb9efa1d8ffc25478203b5f0bf","name":"Rohit Gunthal","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"11:00 - 13:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 10:58:30] Exception occurred Error: Unknown column 'test_ids' in 'field list'
+[2025-05-15 11:00:38] Form submission data: {"csrf_token":"c417539bcd99833081522ba8221a9fe717f617ee777718a536549b1f0cb2c1b5","name":"Rohit Gunmetal\u00a0","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"09:00 - 11:00","test_type":"Full Body Checkup - Advanced","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 11:00:38] Checking existing appointments table structure
+[2025-05-15 11:00:38] Found column: id
+[2025-05-15 11:00:38] Found column: user_id
+[2025-05-15 11:00:38] Found column: order_id
+[2025-05-15 11:00:38] Found column: patient_name
+[2025-05-15 11:00:38] Found column: patient_email
+[2025-05-15 11:00:38] Found column: patient_phone
+[2025-05-15 11:00:38] Found column: appointment_date
+[2025-05-15 11:00:38] Found column: appointment_time
+[2025-05-15 11:00:38] Found column: time_slot
+[2025-05-15 11:00:38] Found column: test_type
+[2025-05-15 11:00:38] Found column: appointment_status
+[2025-05-15 11:00:38] Found column: sample_collection_address
+[2025-05-15 11:00:38] Found column: additional_notes
+[2025-05-15 11:00:38] Found column: created_at
+[2025-05-15 11:00:38] Found column: updated_at
+[2025-05-15 11:00:38] Building query based on existing columns
+[2025-05-15 11:00:38] Using query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, test_ids, notes, user_id, appointment_status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending', NOW())
+[2025-05-15 11:00:38] Exception occurred Error: Unknown column 'test_ids' in 'field list'
+[2025-05-15 11:03:38] Form submission data: {"csrf_token":"ca9b41c6d006d7564ec65c8ef917601e8c98c070602032133d5ffe5386438839","name":"Rohit Gunthal","email":"rohitgunthal44@gmail.com","phone":"8408088454","date":"2025-05-02","time_slot":"07:00 - 09:00","test_type":"Cardiac Health Checkup","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 11:03:38] Checking existing appointments table structure
+[2025-05-15 11:03:38] Found the following columns in appointments table:
+[2025-05-15 11:03:38] - id
+[2025-05-15 11:03:38] - user_id
+[2025-05-15 11:03:38] - order_id
+[2025-05-15 11:03:38] - patient_name
+[2025-05-15 11:03:38] - patient_email
+[2025-05-15 11:03:38] - patient_phone
+[2025-05-15 11:03:38] - appointment_date
+[2025-05-15 11:03:38] - appointment_time
+[2025-05-15 11:03:38] - time_slot
+[2025-05-15 11:03:38] - test_type
+[2025-05-15 11:03:38] - appointment_status
+[2025-05-15 11:03:38] - sample_collection_address
+[2025-05-15 11:03:39] - additional_notes
+[2025-05-15 11:03:39] - created_at
+[2025-05-15 11:03:39] - updated_at
+[2025-05-15 11:03:39] Building query based on existing columns
+[2025-05-15 11:03:39] Using column mappings: name=patient_name, email=patient_email, phone=patient_phone, date=appointment_date, time=appointment_time, test_type=test_type
+[2025-05-15 11:03:39] Using address column: sample_collection_address, notes column: additional_notes
+[2025-05-15 11:03:39] Using query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, test_type, sample_collection_address, additional_notes, user_id, appointment_status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', NOW())
+[2025-05-15 11:03:39] Appointment saved successfully for: Rohit Gunthal
+[2025-05-15 11:29:32] Form submission data: {"csrf_token":"269b6dbcea3590d851c9382a7ad10dfe81ad9d3230579323b367d92e8490a658","name":"Rohit Gunthal","email":"rohitgunthal44@gmail.com","phone":"8408088454","date":"2025-05-15","time_slot":"11:00 - 13:00","test_type":"Full Body Checkup - Advanced","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 11:29:32] Checking existing appointments table structure
+[2025-05-15 11:29:32] Found the following columns in appointments table:
+[2025-05-15 11:29:32] - id
+[2025-05-15 11:29:32] - user_id
+[2025-05-15 11:29:32] - order_id
+[2025-05-15 11:29:32] - patient_name
+[2025-05-15 11:29:32] - patient_email
+[2025-05-15 11:29:32] - patient_phone
+[2025-05-15 11:29:32] - appointment_date
+[2025-05-15 11:29:32] - appointment_time
+[2025-05-15 11:29:32] - time_slot
+[2025-05-15 11:29:32] - test_type
+[2025-05-15 11:29:32] - appointment_status
+[2025-05-15 11:29:32] - sample_collection_address
+[2025-05-15 11:29:32] - additional_notes
+[2025-05-15 11:29:32] - created_at
+[2025-05-15 11:29:32] - updated_at
+[2025-05-15 11:29:32] Building query based on existing columns
+[2025-05-15 11:29:32] Insert query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, time_slot, test_type, sample_collection_address, additional_notes, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2025-05-15 11:33:41] Form submission data: {"csrf_token":"a2ccba741e559cad3acae3e255bdf3873ed4f8ece0490396566314b0cc1bb72c","name":"Rohit Gunthal","email":"rohitgunthal44@gmail.com","phone":"7448088454","date":"2025-05-23","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Advanced","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 11:33:41] Checking existing appointments table structure
+[2025-05-15 11:33:41] Found the following columns in appointments table:
+[2025-05-15 11:33:41] - id
+[2025-05-15 11:33:41] - user_id
+[2025-05-15 11:33:41] - order_id
+[2025-05-15 11:33:41] - patient_name
+[2025-05-15 11:33:41] - patient_email
+[2025-05-15 11:33:41] - patient_phone
+[2025-05-15 11:33:41] - appointment_date
+[2025-05-15 11:33:41] - appointment_time
+[2025-05-15 11:33:41] - time_slot
+[2025-05-15 11:33:41] - test_type
+[2025-05-15 11:33:41] - appointment_status
+[2025-05-15 11:33:41] - sample_collection_address
+[2025-05-15 11:33:41] - additional_notes
+[2025-05-15 11:33:41] - created_at
+[2025-05-15 11:33:41] - updated_at
+[2025-05-15 11:33:41] Building query based on existing columns
+[2025-05-15 11:33:41] Final insert query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, time_slot, test_type, sample_collection_address, additional_notes, appointment_status, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2025-05-15 11:33:41] Parameter types: ssssssssssi
+[2025-05-15 11:33:41] Parameter count: 11
+[2025-05-15 11:33:41] Appointment saved successfully for: Rohit Gunthal
+[2025-05-15 12:48:12] Form submission data: {"csrf_token":"ff25e45237df852727edf2373f7eb48ae1c7a2282929ea716c2ea4e028b86cfd","name":"Rohit Gunmetal\u00a0","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-05-02","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-15 12:48:12] Checking existing appointments table structure
+[2025-05-15 12:48:12] Found the following columns in appointments table:
+[2025-05-15 12:48:12] - id
+[2025-05-15 12:48:12] - user_id
+[2025-05-15 12:48:12] - order_id
+[2025-05-15 12:48:12] - patient_name
+[2025-05-15 12:48:12] - patient_email
+[2025-05-15 12:48:12] - patient_phone
+[2025-05-15 12:48:12] - appointment_date
+[2025-05-15 12:48:12] - appointment_time
+[2025-05-15 12:48:12] - time_slot
+[2025-05-15 12:48:12] - test_type
+[2025-05-15 12:48:12] - appointment_status
+[2025-05-15 12:48:12] - sample_collection_address
+[2025-05-15 12:48:12] - additional_notes
+[2025-05-15 12:48:12] - created_at
+[2025-05-15 12:48:12] - updated_at
+[2025-05-15 12:48:12] Building query based on existing columns
+[2025-05-15 12:48:12] Final insert query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, time_slot, test_type, sample_collection_address, additional_notes, appointment_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2025-05-15 12:48:12] Parameter types: ssssssssss
+[2025-05-15 12:48:12] Parameter count: 10
+[2025-05-15 12:48:12] Appointment saved successfully for: Rohit Gunmetal 
+[2025-05-18 15:22:08] Form submission data: {"csrf_token":"d2b7c1c990da20a51a4be57aeda3460461830713eb4a770d0a4f11526f4204bf","name":"Rohit Gunthal","email":"rohitgunthal44@gmail.com","phone":"7448088454","date":"2025-05-18","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Essential","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-18 15:22:08] Checking existing appointments table structure
+[2025-05-18 15:22:08] Found the following columns in appointments table:
+[2025-05-18 15:22:08] - id
+[2025-05-18 15:22:08] - user_id
+[2025-05-18 15:22:08] - order_id
+[2025-05-18 15:22:08] - patient_name
+[2025-05-18 15:22:08] - patient_email
+[2025-05-18 15:22:08] - patient_phone
+[2025-05-18 15:22:08] - appointment_date
+[2025-05-18 15:22:08] - appointment_time
+[2025-05-18 15:22:08] - time_slot
+[2025-05-18 15:22:08] - test_type
+[2025-05-18 15:22:08] - sample_collection_address
+[2025-05-18 15:22:08] - additional_notes
+[2025-05-18 15:22:08] - appointment_status
+[2025-05-18 15:22:08] - created_at
+[2025-05-18 15:22:08] - updated_at
+[2025-05-18 15:22:08] Building query based on existing columns
+[2025-05-18 15:22:08] Final insert query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, time_slot, test_type, sample_collection_address, additional_notes, appointment_status, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2025-05-18 15:22:08] Parameter types: ssssssssssi
+[2025-05-18 15:22:08] Parameter count: 11
+[2025-05-18 15:22:08] Appointment saved successfully for: Rohit Gunthal
+[2025-05-18 15:46:51] Form submission data: {"csrf_token":"4d8091159e30b15e6b8150e63c2ca41c51f8ec52467d18b967b39387265e8011","name":"Rohit Gunthal","email":"rohitgunthal4482@gmail.com","phone":"8408088454","date":"2025-04-30","time_slot":"07:00 - 09:00","test_type":"Full Body Checkup - Advanced","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-18 15:46:51] Checking existing appointments table structure
+[2025-05-18 15:46:51] Found the following columns in appointments table:
+[2025-05-18 15:46:51] - id
+[2025-05-18 15:46:51] - user_id
+[2025-05-18 15:46:51] - order_id
+[2025-05-18 15:46:51] - patient_name
+[2025-05-18 15:46:51] - patient_email
+[2025-05-18 15:46:51] - patient_phone
+[2025-05-18 15:46:51] - appointment_date
+[2025-05-18 15:46:51] - appointment_time
+[2025-05-18 15:46:51] - time_slot
+[2025-05-18 15:46:51] - test_type
+[2025-05-18 15:46:51] - sample_collection_address
+[2025-05-18 15:46:51] - additional_notes
+[2025-05-18 15:46:51] - appointment_status
+[2025-05-18 15:46:51] - created_at
+[2025-05-18 15:46:51] - updated_at
+[2025-05-18 15:46:51] Building query based on existing columns
+[2025-05-18 15:46:51] Final insert query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, time_slot, test_type, sample_collection_address, additional_notes, appointment_status, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2025-05-18 15:46:51] Parameter types: ssssssssssi
+[2025-05-18 15:46:51] Parameter count: 11
+[2025-05-18 15:46:51] Appointment saved successfully for: Rohit Gunthal
+[2025-05-18 16:02:17] Form submission data: {"csrf_token":"a1a8c1977e221bb4a878c7abbf1c12734b448388392caecfe8f8f98a8f1e3d78","name":"Rohit Gunthal","email":"rohitgunthal44@gmail.com","phone":"8408088454","date":"2025-05-18","time_slot":"09:00 - 11:00","test_type":"Full Body Checkup - Comprehensive","address":"at post malegaon\r\ntq kain","notes":""}
+[2025-05-18 16:02:17] Checking existing appointments table structure
+[2025-05-18 16:02:17] Found the following columns in appointments table:
+[2025-05-18 16:02:17] - id
+[2025-05-18 16:02:17] - user_id
+[2025-05-18 16:02:17] - order_id
+[2025-05-18 16:02:17] - patient_name
+[2025-05-18 16:02:17] - patient_email
+[2025-05-18 16:02:17] - patient_phone
+[2025-05-18 16:02:17] - appointment_date
+[2025-05-18 16:02:17] - appointment_time
+[2025-05-18 16:02:17] - time_slot
+[2025-05-18 16:02:17] - test_type
+[2025-05-18 16:02:17] - sample_collection_address
+[2025-05-18 16:02:17] - additional_notes
+[2025-05-18 16:02:17] - appointment_status
+[2025-05-18 16:02:17] - created_at
+[2025-05-18 16:02:17] - updated_at
+[2025-05-18 16:02:17] Building query based on existing columns
+[2025-05-18 16:02:17] Final insert query: INSERT INTO appointments (patient_name, patient_email, patient_phone, appointment_date, appointment_time, time_slot, test_type, sample_collection_address, additional_notes, appointment_status, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2025-05-18 16:02:17] Parameter types: ssssssssssi
+[2025-05-18 16:02:17] Parameter count: 11
+[2025-05-18 16:02:17] Appointment saved successfully for: Rohit Gunthal

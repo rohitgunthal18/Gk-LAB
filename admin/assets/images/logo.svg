@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+  <g>
+    <text x="20" y="32" font-family="Arial" font-size="24" font-weight="bold" fill="#FF8A00">GK</text>
+    <text x="55" y="32" font-family="Arial" font-size="24" font-weight="bold" fill="#16A085">Health</text>
+    <text x="130" y="32" font-family="Arial" font-size="24" font-weight="bold" fill="#333333">Labs</text>
+  </g>
+</svg> 

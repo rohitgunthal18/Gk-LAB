@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /backups/
+Disallow: /logs/
+
+# Medical Tests and Body Checkup Services in Latur City
+# Website owned by Rohit Gunthal
+# Contact: rohitgunthal1819@gmail.com
+
+Sitemap: https://gklab.com/sitemap.xml 

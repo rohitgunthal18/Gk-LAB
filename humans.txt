@@ -1,0 +1,30 @@
+/* OWNER/DEVELOPER */
+Name: Rohit Gunthal
+Role: Founder, Developer & CEO
+Contact: rohitgunthal1819@gmail.com
+Phone: +91 8408088454
+Location: Latur, Maharashtra, India
+Website: https://gklab.com
+LinkedIn: linkedin.com/in/rohit-gunthal
+Twitter: @rohitgunthal
+Bio: Rohit Gunthal is the founder and developer of GK Lab, a premier diagnostic center offering medical tests and health checkups with home sample collection in Latur.
+
+/* SITE */
+Last update: 2023-10-01
+Language: English
+Doctype: HTML5
+IDE: Visual Studio Code, XAMPP
+Technologies: HTML5, CSS3, JavaScript, PHP, MySQL
+SEO Focus: Full body checkup in Latur, blood test at home in Latur
+
+/* COPYRIGHT */
+This website and all its contents are copyright © 2023 Rohit Gunthal.
+All rights reserved. Unauthorized use, reproduction, or distribution
+of this website or any of its content is strictly prohibited.
+
+/* SERVICES */
+- Full body checkup in Latur
+- Blood tests at home with doorstep collection
+- Health screening packages
+- Diagnostic laboratory services in Latur
+- Medical testing with same-day results 

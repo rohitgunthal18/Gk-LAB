@@ -1,0 +1,260 @@
+# 🚀 GK LAB WEBSITE - DEPLOYMENT GUIDE 🚀
+
+## 📦 GETTING STARTED: PROJECT SETUP
+
+### 1️⃣ Extract Project Files
+- 📂 Locate your GK_Lab.zip file on your computer
+- 🔓 Right-click and select "Extract All" (Windows) or double-click (Mac)
+- 📁 Choose a destination folder that's easy to access
+- ⏱️ Wait for extraction to complete
+
+### 2️⃣ Review Project Structure
+- 📋 Confirm you have these key folders and files:
+  - 📁 admin (admin dashboard files)
+  - 📁 assets (CSS, JS, images)
+  - 📁 includes (PHP components)
+  - 📄 index.html (homepage)
+  - 📄 database.php (database setup script)
+  - 📄 connection.php (database connection file)
+  - 📄 Other PHP files (tests.php, checkups.php, etc.)
+
+## 🌐 WEB HOSTING SETUP
+
+### 1️⃣ Choose a Web Hosting Provider
+- 🔍 Requirements: PHP 7.4+ and MySQL 5.7+ support
+- 💰 Budget options: Hostinger, HostGator, InMotion
+- 🏢 For Indian websites: MilesWeb, HostingRaja, BigRock
+
+### 2️⃣ Create Hosting Account & Domain
+- 🛒 Purchase a hosting plan (shared hosting is sufficient)
+- 🔤 Register domain name (ideally gklab.com or similar)
+- ⚙️ Set up hosting account with your provider
+
+## 📤 UPLOADING PROJECT FILES
+
+### 1️⃣ Access File Manager
+- 🔑 Log in to your hosting control panel (cPanel, Plesk, etc.)
+- 📂 Find and open the File Manager tool
+- 📁 Navigate to public_html or www folder (your website root)
+
+### 2️⃣ Upload Project Files
+- 📤 Click "Upload" button in file manager
+- 📂 Select all files/folders from your extracted project
+- ⏳ Wait for upload to complete (may take several minutes)
+- ✅ Verify all files appear in the file manager
+
+### 3️⃣ Set File Permissions
+- 📁 For folders: set to 755 (drwxr-xr-x)
+- 📄 For files: set to 644 (rw-r--r--)
+- 📝 For specific folders needing write access:
+  - 📁 Set uploads folder to 777 (temporarily during setup)
+  - 📁 Set admin/reports folder to 777 (for test reports)
+
+## 🗃️ DATABASE SETUP
+
+### 1️⃣ Create Database
+- 🔑 Log in to your hosting control panel
+- 🗃️ Find "MySQL Databases" or "Database Wizard"
+- 🆕 Create a new database named "gk_lab"
+- 👤 Create a new database user
+- 🔐 Set a strong password (save this information!)
+- 🔄 Assign all privileges to this user for the database
+
+### 2️⃣ Configure Database Connection
+- 📝 Open connection.php in the file manager's code editor
+- ✏️ Update database credentials:
+  ```php
+  $host = "localhost"; // Usually stays as localhost
+  $username = "your_db_username"; // The username you created
+  $password = "your_db_password"; // The password you set
+  $database = "gk_lab"; // The database name you created
+  ```
+- 💾 Save the file
+
+### 3️⃣ Run Database Setup Script
+- 🌐 Open your web browser
+- 🔗 Navigate to: yourdomain.com/database.php
+- ⏳ Wait for the script to complete setup (may take 1-2 minutes)
+- ✅ You should see success messages for each table creation
+- 🚨 If you see errors, check your database credentials in connection.php
+
+## 📊 IMPORTING TEST DATA
+
+### 1️⃣ Admin Login
+- 🌐 Navigate to: yourdomain.com/admin
+- 🔑 Login with default credentials:
+  - Username: admin@gklab.com
+  - Password: admin123
+- 🔐 Immediately change the default password in Profile settings!
+
+### 2️⃣ Adding Test Categories
+- 📋 Go to "Categories" section in admin panel
+- ➕ Verify the default categories exist:
+  - Full Body, Diabetes, Heart, Liver, etc.
+- ➕ Add any additional categories needed
+
+### 3️⃣ Adding Test Cards
+- 📋 Go to "Tests" section in admin panel
+- ➕ Click "Add New Test"
+- 📝 Fill in details for each test:
+  - Name, category, description, prices
+  - Parameters, fasting requirements, etc.
+- 🔄 Repeat for all tests you offer
+- 💡 Tip: Start with 5-10 common tests like CBC, Blood Sugar, etc.
+
+### 4️⃣ Adding Checkup Packages
+- 📋 Go to "Checkups" section in admin panel
+- ➕ Click "Add New Checkup"
+- 📝 Fill in details for each package:
+  - Name, description, included tests, price
+- 🔄 Create at least 3-5 popular packages like:
+  - Basic Health Checkup
+  - Comprehensive Full Body Checkup
+  - Diabetes Screening Package
+
+## 🔍 SEO CONFIGURATION
+
+### 1️⃣ Update Meta Information
+- 📝 Edit index.html, tests.php, checkups.php files
+- ✏️ Update title tags with your lab name and location:
+  ```html
+  <title>GK Lab - Diagnostic Center in Latur | Blood Tests & Health Checkups</title>
+  ```
+- ✏️ Update meta descriptions with local keywords:
+  ```html
+  <meta name="description" content="Best diagnostic lab in Latur offering blood tests, health checkups and home sample collection. Book your test online at GK Lab.">
+  ```
+
+### 2️⃣ Configure Local SEO
+- 📝 Edit schema.json file in the root directory
+- ✏️ Update with your lab's specific information:
+  - Business name, address, phone number
+  - Services, business hours, etc.
+- 💾 Save the file
+
+### 3️⃣ Update Site Ownership
+- 📝 Edit humans.txt file in the root directory
+- ✏️ Update with owner's information:
+  - Name, contact details, location
+- 💾 Save the file
+
+## 🔒 SECURITY SETUP
+
+### 1️⃣ Secure Admin Access
+- 🔐 Change default admin password
+- 🛡️ Consider setting up .htaccess protection for /admin directory
+
+### 2️⃣ Update File Permissions
+- 📁 Return any temporarily set 777 folders to 755
+- 🔐 Ensure connection.php has restricted permissions (644)
+
+### 3️⃣ Enable SSL
+- 🔒 Activate the free SSL certificate in your hosting control panel
+- 🔄 Update site URL to https:// in your hosting settings
+
+## ✅ FINAL VERIFICATION
+
+### 1️⃣ Test Core Functionality
+- 🏠 Visit homepage and check all links
+- 🔍 Search for tests and verify results
+- 🛒 Add items to cart and proceed to checkout
+- 📅 Test appointment scheduling system
+- 👤 Create a test user account
+
+### 2️⃣ Mobile Compatibility Check
+- 📱 Open the website on a mobile device
+- 🔄 Test responsiveness on different screen sizes
+- 👆 Verify all interactive elements work on touch devices
+
+### 3️⃣ Browser Compatibility
+- 🌐 Test in Chrome, Firefox, Edge, and Safari
+- 🔍 Check for any display or functionality issues
+
+## 🛠️ TROUBLESHOOTING COMMON ISSUES
+
+### 1️⃣ Database Connection Errors
+- ✅ Verify database credentials in connection.php
+- ✅ Check if database user has correct permissions
+- ✅ Try manually connecting to the database using phpMyAdmin
+
+### 2️⃣ White Screen or 500 Errors
+- ✅ Check PHP error logs in your hosting control panel
+- ✅ Temporarily enable error display in PHP settings
+- ✅ Verify PHP version compatibility (7.4+ recommended)
+
+### 3️⃣ Missing Images or Styles
+- ✅ Check file paths in HTML/CSS
+- ✅ Verify all asset files were uploaded correctly
+- ✅ Clear browser cache and refresh
+
+### 4️⃣ Form Submission Issues
+- ✅ Check for PHP mail configuration
+- ✅ Verify form action URLs are correct
+- ✅ Test with different form inputs
+
+## 📱 SETTING UP MARKETING & NOTIFICATIONS
+
+### 1️⃣ Email Configuration
+- 📧 Configure email settings in admin panel
+- ✉️ Test email notifications for:
+  - Appointment confirmations
+  - Order receipts
+  - Test results availability
+
+### 2️⃣ SMS Notification Setup (Optional)
+- 📞 Sign up for an SMS gateway service
+- 🔗 Configure SMS API credentials in the admin panel
+- 📱 Test SMS notifications
+
+### 3️⃣ Google Business Setup
+- 🗺️ Create Google Business Profile for your lab
+- 📍 Verify your business location
+- 🔗 Add your website URL to your profile
+- 📸 Upload photos of your facility
+
+## 🎯 POST-DEPLOYMENT MARKETING
+
+### 1️⃣ Local SEO Promotion
+- 📍 List your business on local directories
+- 📝 Create content focusing on "health checkups in Latur"
+- 🏥 Network with local doctors for referrals
+
+### 2️⃣ Initial Promotions
+- 🏷️ Set up welcome coupons for first-time users
+- 📢 Create special packages for common health concerns
+- 📊 Track which promotions drive the most traffic
+
+## 💻 MAINTENANCE TASKS
+
+### 1️⃣ Regular Backups
+- 💾 Set up weekly database backups
+- 📁 Back up all website files monthly
+- 🔄 Store backups in multiple locations
+
+### 2️⃣ Security Updates
+- 🔐 Regularly update PHP version
+- 🛡️ Monitor for suspicious activity
+- 🔍 Perform periodic security scans
+
+### 3️⃣ Content Updates
+- 📝 Keep test information current
+- 🏥 Add new tests and packages as available
+- 📰 Consider adding a health blog for SEO benefits
+
+## 📞 GETTING HELP
+
+If you encounter any issues during deployment:
+
+1. 📄 Check the documentation files in the 'docs' folder
+2. 🔍 Search for specific error messages online
+3. 📧 Contact your hosting provider's support
+4. 💬 Reach out to the developer at rohitgunthal1819@gmail.com
+
+---
+
+## 🎉 CONGRATULATIONS!
+
+Your GK Lab website should now be fully deployed and operational! Remember to regularly update content, monitor performance, and gather user feedback to continuously improve the site.
+
+**Prepared for**: Rohit Gunthal
+**Contact**: rohitgunthal1819@gmail.com | 8408088454 

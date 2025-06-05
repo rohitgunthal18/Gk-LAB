@@ -1,0 +1,38 @@
+COPYRIGHT AND LICENSE NOTICE
+
+GK Lab Website and Associated Content
+Copyright (c) 2023 Rohit Gunthal. All Rights Reserved.
+
+TERMS AND CONDITIONS
+
+1. OWNERSHIP
+   This website (GK Lab), including all source code, design elements, content, 
+   functionality, and all associated materials is the exclusive property of 
+   Rohit Gunthal (the "Owner").
+
+2. PROHIBITED ACTIVITIES
+   Without explicit written permission from the Owner, you may not:
+   - Copy, reproduce, modify, or create derivative works of this website or its content
+   - Reverse engineer, decompile, or disassemble any part of this website
+   - Remove any copyright or other proprietary notices from the website
+   - Use the website's code or design elements for any other project
+   - Redistribute, sell, lease, or sublicense any part of this website
+
+3. CONTACT FOR PERMISSIONS
+   For any permissions or licensing requests, please contact:
+   Email: rohitgunthal1819@gmail.com
+   Phone: 8408088454
+
+4. ENFORCEMENT
+   The Owner reserves the right to pursue all legal remedies for any violations 
+   of this license, including but not limited to injunctive relief and 
+   monetary damages.
+
+5. GOVERNING LAW
+   This license shall be governed by and construed in accordance with the laws 
+   of India, without regard to its conflict of law provisions.
+
+THIS WEBSITE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. 
+THE OWNER DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND 
+FITNESS FOR A PARTICULAR PURPOSE. 
