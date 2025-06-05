@@ -8,7 +8,7 @@
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
 ## 🌐 Live Demo
-[View GK Lab Diagnostic Center](https://gklab.com/)
+[View GK Lab Diagnostic Center](https://gklab.unaux.com/)
 
 ## 📝 Project Overview
 GK Lab is a comprehensive diagnostic center management system designed for medical laboratories. This platform offers online test booking, appointment scheduling, health package management, and doorstep sample collection services. The system features a user-friendly interface for customers to book tests and an admin panel for laboratory staff to manage appointments, test results, and patient records.
