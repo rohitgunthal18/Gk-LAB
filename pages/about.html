@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GK Lab</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Cart Badge CSS -->
+    <style>
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #FF8A00;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .btn-cart {
+            position: relative;
+        }
+        
+        /* Animation for cart button */
+        @keyframes cartPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .cart-added {
+            animation: cartPulse 0.5s ease;
+        }
+        
+        /* User account dropdown styles */
+        .user-toggle {
+            position: relative;
+            margin-left: 10px;
+        }
+        
+        .user-dropdown {
+            right: 0;
+            left: auto;
+            min-width: 180px;
+        }
+        
+        .user-dropdown li a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+        }
+        
+        .user-dropdown li a i {
+            margin-right: 10px;
+            font-size: 14px;
+            color: var(--primary-green);
+        }
+        
+        .about-hero {
+            background: linear-gradient(135deg, #F0FFF8 0%, #FFF8EC 100%);
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+        .about-hero .page-title {
+            font-size: 40px;
+            color: var(--primary-green);
+            margin-bottom: 18px;
+        }
+        .about-hero .page-subtitle {
+            font-size: 20px;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .about-cards-section {
+            padding: 40px 0 20px;
+            background: var(--white);
+        }
+        .about-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .about-card {
+            background: linear-gradient(135deg, #004D40 0%, #27AE60 100%);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 260px;
+            position: relative;
+        }
+        .about-card i {
+            font-size: 32px;
+            margin-bottom: 18px;
+            color: #FFC107;
+        }
+        .about-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .about-card p {
+            font-size: 15px;
+            color: #e0f2f1;
+        }
+        @media (max-width: 900px) {
+            .about-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        /* Team Section */
+        .team-section {
+            background: #F8F9FA;
+            padding: 50px 0 30px;
+        }
+        .team-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 35px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+            padding: 28px 18px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .team-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #16A08522;
+        }
+        .team-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 4px;
+        }
+        .team-card .role {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        .team-card p {
+            font-size: 14px;
+            color: #555;
+        }
+        @media (max-width: 900px) {
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Timeline Section */
+        .timeline-section {
+            background: var(--white);
+            padding: 50px 0 30px;
+        }
+        .timeline-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 35px;
+        }
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #16A085 0%, #27AE60 100%);
+            border-radius: 2px;
+        }
+        .timeline-event {
+            position: relative;
+            margin-bottom: 38px;
+            padding-left: 38px;
+        }
+        .timeline-event:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 20px;
+            height: 20px;
+            background: #16A085;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(22,160,133,0.12);
+        }
+        .timeline-event h5 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #16A085;
+            margin-bottom: 4px;
+        }
+        .timeline-event p {
+            font-size: 14px;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            .timeline {
+                padding-left: 18px;
+            }
+            .timeline-event {
+                padding-left: 30px;
+            }
+            .timeline-dot {
+                width: 14px;
+                height: 14px;
+                top: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="../index.html">
+                        <div class="logo-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h1 class="logo-text">GK Lab</h1>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <div class="menu-dropdown">
+                    <a href="#" class="menu-item dropdown-toggle">
+                        <i class="fas fa-th-large"></i>
+                        Pages <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="logged-in-only" style="display: none;"><a href="orders.php">Orders</a></li>
+                    </ul>
+                </div>
+                <a href="../tests.php" class="menu-item">
+                    <i class="fas fa-microscope"></i>
+                    Tests
+                </a>
+                <a href="../checkups.php" class="menu-item">
+                    <i class="fas fa-box"></i>
+                    Checkups
+                </a>
+                <a href="cart.php" class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-dropdown">
+                    <a href="#" class="btn-support dropdown-toggle user-toggle" style="display: flex; align-items: center;">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="account-text">Account</span> <i class="fas fa-chevron-down" style="margin-left: 8px;"></i>
+                    </a>
+                    <ul class="dropdown-menu user-dropdown">
+                        <li><a href="../login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        <li><a href="../register.php"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li class="logged-in-only" style="display: none;"><a href="../profile.php"><i class="fas fa-user"></i> My Profile</a></li>
+                        <li class="logged-in-only" style="display: none;"><a href="../logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="page-title">About GK Lab</h1>
+            <p class="page-subtitle">Delivering accurate health diagnostics with care and precision for over 10 years.</p>
+        </div>
+    </section>
+
+    <!-- About Cards Section -->
+    <section class="about-cards-section">
+        <div class="container">
+            <div class="about-cards-grid">
+                <div class="about-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Our Mission</h3>
+                    <p>To make quality healthcare diagnostics accessible to everyone through innovative technology and home collection services.</p>
+                </div>
+                
+                <div class="about-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Our Vision</h3>
+                    <p>To revolutionize preventive healthcare by enabling people to track and maintain their health with regular diagnostics.</p>
+                </div>
+                
+                <div class="about-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Our Values</h3>
+                    <p>Accuracy, reliability, compassion and innovation are at the heart of everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-title">Our Leadership Team</h2>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="../assets/images/team/doctor1.jpg" alt="Dr. Vikram Sharma">
+                    <h4>Dr. Vikram Sharma</h4>
+                    <div class="role">Founder & Chief Medical Officer</div>
+                    <p>20+ years of experience in diagnostic medicine and healthcare management.</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="../assets/images/team/doctor2.jpg" alt="Dr. Priya Desai">
+                    <h4>Dr. Priya Desai</h4>
+                    <div class="role">Clinical Director</div>
+                    <p>Leading expert in laboratory medicine and pathology with international recognition.</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="../assets/images/team/exec1.jpg" alt="Rajesh Kapoor">
+                    <h4>Rajesh Kapoor</h4>
+                    <div class="role">Chief Executive Officer</div>
+                    <p>Former healthcare executive with extensive experience in scaling medical operations.</p>
+                </div>
+                
+                <div class="team-card">
+                    <img src="../assets/images/team/tech1.jpg" alt="Neha Gupta">
+                    <h4>Neha Gupta</h4>
+                    <div class="role">Chief Technology Officer</div>
+                    <p>Tech innovator revolutionizing how healthcare diagnostics connect with patients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="timeline-title">Our Journey</h2>
+            
+            <div class="timeline">
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <h5>2013</h5>
+                    <p>GK Lab founded with a mission to provide quality diagnostic services.</p>
+                </div>
+                
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <h5>2015</h5>
+                    <p>Launched home collection services for blood tests to improve accessibility.</p>
+                </div>
+                
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <h5>2017</h5>
+                    <p>Achieved NABL accreditation for quality standards in diagnostic testing.</p>
+                </div>
+                
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <h5>2019</h5>
+                    <p>Expanded services to cover 20+ cities across India with reliable diagnostics.</p>
+                </div>
+                
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <h5>2021</h5>
+                    <p>Introduced specialized health packages for specific conditions and demographics.</p>
+                </div>
+                
+                <div class="timeline-event">
+                    <div class="timeline-dot"></div>
+                    <h5>2023</h5>
+                    <p>Launched our digital platform for seamless booking and reports access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Company Info -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <!-- SVG logo directly embedded -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="180" height="60">
+                          <defs>
+                            <linearGradient id="flaskGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stop-color="#16A085"/>
+                              <stop offset="100%" stop-color="#107C67"/>
+                            </linearGradient>
+                          </defs>
+                          
+                          <!-- Main Flask -->
+                          <path d="M50 15 v12 L30 65 c-1 2 0 5 3 5 h34 c3 0 4-3 3-5 L50 27 v-12 z" 
+                                fill="white" stroke="url(#flaskGradient)" stroke-width="2.5"/>
+                          
+                          <!-- Flask liquid -->
+                          <path d="M50 40 L38 62 c-1 2 0 4 3 4 h18 c3 0 4-2 3-4 L50 40z" 
+                                fill="url(#flaskGradient)" opacity="0.3"/>
+                          
+                          <!-- Flask top -->
+                          <rect x="45" y="10" width="10" height="5" rx="2" fill="url(#flaskGradient)"/>
+                          
+                          <!-- Bubbles in flask -->
+                          <circle cx="43" cy="50" r="3" fill="url(#flaskGradient)" opacity="0.6"/>
+                          <circle cx="55" cy="45" r="2" fill="url(#flaskGradient)" opacity="0.6"/>
+                          <circle cx="47" cy="55" r="1.5" fill="url(#flaskGradient)" opacity="0.6"/>
+                          
+                          <!-- Text: GK LAB -->
+                          <text x="85" y="45" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#16A085">
+                            GK LAB
+                          </text>
+                          <text x="85" y="58" font-family="Arial, sans-serif" font-size="12" fill="#555555">
+                            DIAGNOSTIC CENTER
+                          </text>
+                          
+                          <!-- DNA Helix Icon -->
+                          <g transform="translate(180, 40) scale(0.9)">
+                            <!-- DNA strand 1 -->
+                            <path d="M0,0 C5,5 15,5 20,0 C25,-5 35,-5 40,0" stroke="#16A085" stroke-width="2.5" fill="none"/>
+                            <!-- DNA strand 2 -->
+                            <path d="M0,10 C5,5 15,5 20,10 C25,15 35,15 40,10" stroke="#16A085" stroke-width="2.5" fill="none"/>
+                            <!-- Connecting lines -->
+                            <line x1="5" y1="2.5" x2="5" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                            <line x1="15" y1="2.5" x2="15" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                            <line x1="25" y1="2.5" x2="25" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                            <line x1="35" y1="2.5" x2="35" y2="7.5" stroke="#16A085" stroke-width="1.5"/>
+                          </g>
+                        </svg>
+                    </div>
+                    <p class="footer-text">
+                        Experience the convenience of high-quality diagnostic laboratory services in the comfort of your home. We bring cutting-edge diagnostics right to your doorstep.
+                    </p>
+                    <div class="contact-info" style="margin-bottom: 15px;">
+                        <p style="margin: 5px 0;"><i class="fas fa-phone-alt"></i> 7620065204</p>
+                        <p style="margin: 5px 0;"><i class="fas fa-envelope"></i> kedargovind144@gmail.com</p>
+                        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt"></i> Kedar Clinical Laboratory, Ambajogai</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/xrohia/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="../tests.php">Lab Tests</a></li>
+                        <li><a href="../checkups.php">Health Checkups</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">For Patients</h4>
+                    <ul class="footer-links">
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="full-body-checkup.html">Full Body Checkup</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2024 GK Health Labs Pvt. Ltd. All rights reserved
+                </div>
+                <div class="policy-links">
+                    <a href="terms.html" class="policy-link">Terms</a>
+                    <a href="privacy.html" class="policy-link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js"></script>
+    
+    <!-- User account dropdown handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check login status
+            fetch('../check_login_status.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Debug output
+                    console.log('Login status data:', data);
+                    console.log('User first name:', data.user_first_name);
+                    console.log('Account text element:', document.getElementById('account-text'));
+                    
+                    // Get all menu items that should only be shown when logged in
+                    const loggedInItems = document.querySelectorAll('.logged-in-only');
+                    
+                    if (data.loggedIn) {
+                        // User is logged in
+                        loggedInItems.forEach(item => item.style.display = 'block');
+                        
+                        // Hide login/register options
+                        document.querySelector('a[href="../login.php"]').parentElement.style.display = 'none';
+                        document.querySelector('a[href="../register.php"]').parentElement.style.display = 'none';
+                        
+                        // Update account text to show user's name
+                        const accountText = document.getElementById('account-text');
+                        if (accountText && data.user_first_name) {
+                            console.log('Setting account text to:', data.user_first_name);
+                            accountText.textContent = data.user_first_name;
+                        }
+                    } else {
+                        // User is logged out
+                        loggedInItems.forEach(item => item.style.display = 'none');
+                        
+                        // Make sure login/register are visible
+                        document.querySelector('a[href="../login.php"]').parentElement.style.display = 'block';
+                        document.querySelector('a[href="../register.php"]').parentElement.style.display = 'block';
+                        
+                        // Reset account text
+                        const accountText = document.getElementById('account-text');
+                        if (accountText) {
+                            accountText.textContent = 'Account';
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error checking login status:', error);
+                });
+                
+            // Update cart count
+            fetch('../pages/cart-count.php')
+                .then(response => response.text())
+                .then(data => {
+                    try {
+                        // Try to parse as JSON first
+                        const jsonData = JSON.parse(data);
+                        document.querySelector('.cart-count').textContent = jsonData.count;
+                    } catch (e) {
+                        // If not valid JSON, use as plain text
+                        document.querySelector('.cart-count').textContent = data;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching cart count:', error);
+                });
+        });
+    </script>
+</body>
+</html> 
